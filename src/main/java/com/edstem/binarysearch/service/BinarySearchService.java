@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 @RequiredArgsConstructor
 public class BinarySearchService {
 
-    public BinarySearchResponse binarySearch(BinarySearchRequest request, int value) {
+    public BinarySearchResponse binarySearch(BinarySearchRequest request, long value) {
         List<Integer> array = request.getNumbers();
         int left = 0;
         int right = array.size() - 1;

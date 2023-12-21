@@ -8,6 +8,5 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class BinarySearchResponse {
-    private int indexValue;
-
+    private long indexValue;
 }
