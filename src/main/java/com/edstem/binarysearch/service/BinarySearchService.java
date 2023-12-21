@@ -16,8 +16,8 @@ public class BinarySearchService {
         List<Integer> array = request.getNumbers();
         int left = 0;
         int right = array.size() - 1;
-        int mid = (left + right) / 2;
         while (left <= right) {
+            int mid = (left + right) / 2;
             if (value == array.get(mid)) {
                 return new BinarySearchResponse(mid);
             } else if (array.get(mid) < value) {
@@ -25,7 +25,6 @@ public class BinarySearchService {
             } else {
                 right = mid - 1;
             }
-            mid = (left + right) / 2;
         }
         throw new NoSuchElementException("Value not found in array");
     }
