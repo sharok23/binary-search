@@ -19,7 +19,7 @@ public class BinarySearchController {
     private final BinarySearchService binarySearchService;
 
     @PostMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
-    private BinarySearchResponse binarySearch(@RequestBody BinarySearchRequest request, @RequestParam int value) {
+    private BinarySearchResponse binarySearch(@RequestBody BinarySearchRequest request, @RequestParam long value) {
         return binarySearchService.binarySearch(request, value);
     }
 }
